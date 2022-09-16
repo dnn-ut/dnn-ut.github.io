@@ -1,1 +1,1 @@
-Deep Learning Fall 20222
+Deep Learning Fall 2022
