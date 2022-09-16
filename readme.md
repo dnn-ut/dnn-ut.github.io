@@ -1,1 +1,1 @@
-Deep Learning Fall 2022
+Deep Neual Network Fall 2022
