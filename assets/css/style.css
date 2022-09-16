@@ -1,0 +1,103 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 100px;
+}
+
+#title {
+    padding-top: 20px;
+}
+
+#title h1 {
+    font-size: 36px;
+    text-align: center;
+
+}
+
+#title img {
+    padding-top: 10px;
+    width: 100%;
+}
+
+.section_header {
+    font-size: 34px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.subsection_header {
+    font-size: 28px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#about p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.headshot {
+    width: 150px;
+}
+
+.instructor_info {
+    text-align: center;
+}
+
+.instructor_info h2 {
+    padding-top: 10px;
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+.instructor_info h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+#schedule {
+    font-size: 18px;
+}
+
+#course_outline {
+    font-size: 18px;
+}
+
+#grading {
+    font-size: 18px;
+}
+
+#lab {
+    font-size: 18px;
+}
+
+#resources {
+    font-size: 18px;
+}
+
+#honor_code {
+    font-size: 18px;
+}
+
+@media (min-width:769px) {
+    #guest_speaker {
+        margin-top: 20px;
+    }
+}
+
+.instructorphoto img {
+    width: 160px;
+    height: 160px;
+    border-radius: 140px;
+    margin-bottom: 10px;
+}
+
+.instructor {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    font-size: 17px;
+}

@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+    <!-- page css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+    <title>Deep-Neural-Networks-UT, Fall 2022</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fall 2022</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#course_info">Course Info</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#course_outline">Outline</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://piazza.com/berkeley/spring2021/ee2902">Piazza</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://www.gradescope.com/courses/221753">Gradescope</a>
+                    </li>
+                    <!--<li class="nav-item active">-->
+                    <!--<a class="nav-link" href="#">Archives</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" id='title'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h1>Deep-Neural-Networks-UT, Fall 2022
+            </div>
+            <div class="col-md-12">
+                <img src="assets/image/ut_header.jpg" class="img-fluid" alt="AI Hardware">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='about'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Course Overview</div>
+            </div>
+            <div class="col-md-12">
+                <p>Machine learning has emerged to be a key approach to solving complex cognition and learning problems.
+                    Deep neural networks, in particular, have become pervasive due to their successes across a variety
+                    of applications, including computer vision, speech recognition, natural language processing, etc.
+                    While machine learning algorithms deliver impressive accuracy on many deployment scenarios, the
+                    complexity of the algorithms also poses a unique computational challenge to state-of-the-art
+                    hardware design.</p>
+                <p>To this end, this course is designed to help students come up to speed on various aspects of
+                    Deep-Neural-Networks-UT, Fall 2022 of deep learning, deep learning frameworks, hardware
+                    accelerators, co-optimization of algorithms and hardware, training and inference, support for
+                    state-of-the-art deep learning networks. In particular, this course is structured around building
+                    hardware prototypes for machine learning systems using state-of-the-art platforms (e.g., FPGAs and
+                    ASICs). It's also a seminar-style course so students are expected to present, discuss, and interact
+                    with research papers. At the end of the semester, students will present their work based on a class
+                    research project.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container sec">
+        <!-- Staff Info -->
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Instructor</h3>
+                <div class="instructor">
+                    <a href="https://ece.ut.ac.ir/en/~akalhor">
+                        <div class="instructorphoto"><img src="assets/image/Ahmad_Kalhor.jpg"></div>
+                        <div>Ahmad Kalhor</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h3>Course Assistants</h3>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/reza-dehghani-572b3b154/">
+                        <div class="instructorphoto"><img src="assets/image/Reza_Dehghani.jpg"></div>
+                        <div>Reza Dehghani</a><br>Head CA</div>
+                </div>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/reza-dehghani-572b3b154/">
+                        <div class="instructorphoto"><img src="assets/image/Kimia_Alavi.jpg"></div>
+                        <div>kimia Alavi</a><br>Head CA</div>
+        </div>
+                <br>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/maedeh-h-toosi-038951a7/">
+                        <div class="instructorphoto"><img src="assets/image/Maedeh_Toosi.jpg"></div>
+                        <div>Maedeh H.Toosi</div>
+                    </a>
+                </div>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/mohammad-nili/">
+                        <div class="instructorphoto"><img src="assets/image/MohammadـNili.jpg"></div>
+                        <div>Mohammad Nili</div>
+                    </a>
+                </div>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/giray-ogut">
+                        <div class="instructorphoto"><img src="assets/image/Abbas_Badiei.jpg"></div>
+                        <div>Abbas_Badiei</div>
+                    </a>
+                </div>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/xiyuan-tracey-chen-7378a0158/">
+                        <div class="instructorphoto"><img src="assets/image/Amin_Mohammadi.jpg"></div>
+                        <div>Amin_Mohammadi</div>
+                    </a>
+                </div>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/alexandra-porter-b75a078b">
+                        <div class="instructorphoto"><img src="assets/image/Amin_Sheykh.jpg"></div>
+                        <div>Amin_Sheykh</div>
+                    </a>
+                </div>
+                <div class="instructor">
+                    <a href="http://hyren.me/">
+                        <div class="instructorphoto"><img src="assets/image/Amir_Davanloo.jpg"></div>
+                        <div>Amir_Davanloo</div>
+                    </a>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Milad_Raeisi.jpg"></div>
+                      <div>Milad_Raeisi</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Mohammad_Heydari.jpg"></div>
+                      <div>Mohammad_Heydari</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Mohammad_Sepehri.jpg"></div>
+                      <div>Mohammad_Sepehri</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Mojtaba_Amiri.jpg"></div>
+                      <div>Mojtaba_Amiri</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Shahla_Daneshi.jpg"></div>
+                      <div>Shahla_Daneshi</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Siavash_Razmi.jpg"></div>
+                      <div>Siavash_Razmi</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/Siavash_Shams.jpg"></div>
+                      <div>Siavash_Shams</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/man_avatar.png"></div>
+                      <div>Seyed_Mohammad_Dashti</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/man_avatar.png"></div>
+                      <div>Danyal_saedi</div>
+                </div>
+                <div class="instructor">
+                      <div class="instructorphoto"><img src="assets/image/man_avatar.png"></div>
+                      <div>Sajjad_Alikhani</div>
+                </div>
+            </div>
+
+
+    <div class="container" id='course_info'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Lectures and Office Hours</div>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Lectures</td>
+                            <td>Mon, Wed</td>
+                            <td>2:00 pm - 3:30 pm</td>
+                            <td><a href="https://berkeley.zoom.us/j/93107273919">Zoom</a></td>
+                            <td>Prof. Sophia Shao</td>
+                        </tr>
+                        <tr>
+                            <td>Office Hours</td>
+                            <td>Tue</td>
+                            <td>1:00 pm - 2:00 pm</td>
+                            <td><a href="https://berkeley.zoom.us/j/99084023276">Zoom</a></td>
+                            <td>Prof. Sophia Shao</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Thu</td>
+                            <td>10:00 am - 11:00 am</td>
+                            <td><a href="https://berkeley.zoom.us/j/4924638910">Zoom</a></td>
+                            <td>Abe Gonzalez</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='grading'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Grading</div>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td align="center">Readings</td>
+                            <td>10 %</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Labs</td>
+                            <td>40 %</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Projects</td>
+                            <td>50 %</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Course participation (e.g.,
+                            Piazza, Gemmini/Chipyard code contributions)</td>
+                            <td>5% (extra credit) </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <ul>
+                    <li>Late day policy: Each student has a total of seven late
+                    days for the entire semester. Late days can be used for
+                    labs, paper reviews, and project checkoffs but not for the project
+                    presentation and report. </li>
+                    <li>Students may choose to allocate all 7 late days to one submission or evenly distribute them across multiple submissions.</li>
+                    <li>If a student doesn’t have any remaining late days, late submissions will incur a 10% penalty per day.</li>
+                    <li>The late days for a team of 2-3 students during the
+                    project phase are the minimum remaining late days of the
+                    team members.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='lab'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Labs</div>
+            </div>
+
+            <div class="col-md-12">
+                <ul>
+                    <li>Ask questions on our <a href="https://piazza.com/berkeley/spring2021/ee2902">Piazza</a> forum.</li>
+                    <li>Labs will be posted as links in the outline below. Please submit completed labs via <a href="https://www.gradescope.com/courses/221753">Gradescope</a>.
+                        See <a href="https://piazza.com/berkeley/spring2021/ee2902">Piazza</a> for the entry code.</li>
+                    <li>Labs will be challenging and graded for correctness.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='course_outline'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Course Outline</div>
+            </div>
+            <div class="col-md-12">
+                <ul>
+                    <li><a
+                    href="https://www.youtube.com/playlist?list=PLkFD6_40KJIxFWtQg20byt9umBlk6X7By">Lecture
+                    playlist</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table table-striped" id="course_outline_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Week</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Lecture Topic</th>
+                            <th scope="col">Readings</th>
+                            <th scope="col">Paper Review (by Wednesday)</th>
+                            <th scope="col">Labs/Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>1/20</td>
+                            <td>Class Organization & Introduction
+                                <a
+                                href="https://drive.google.com/file/d/1Ij3WJB0n4flxaHaIeRamoNfvNUnkVDFp/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/eV5JORrwG10">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>1/25</td>
+                            <td>Introduction to DNNs
+                                <a
+                                href="https://drive.google.com/file/d/1JI4ivKVCugNM0dNEA-6tUnq4PhLNaKzn/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/sCS0wAhsKmw">recording</a>
+                            </td>
+                            <td><a
+                            href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet,
+                            NeurIPS'2012</a></td>
+                            <td><a
+                            href="https://forms.gle/tevAvmGdJ9q7Sx5q6">[Submit
+                            your review here.]</a></td>
+                            <td><a href="https://drive.google.com/file/d/1LBtLjz2pdo6uj-E0aR69-ZGjmR9RBSDU/view?usp=sharing">Lab 1 (due 2/5)</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>1/27</td>
+                            <td>Introduction to DNNs 2
+                                <a
+                                href="https://drive.google.com/file/d/1Kp1AUCx4q9Dk_6X_aGh43cPb66uffbpY/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/X7si5x_dt_4">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>2/1</td>
+                            <td>Quantization
+                                <a
+                                href="https://drive.google.com/file/d/1Kxb5NwNRdgm6fNYkPPLBB3JqlDyMlR8o/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/fDRWng4F0jY">recording</a>
+                            </td>
+                            <td><a
+                            href="https://arxiv.org/pdf/1712.05877.pdf">Integer-Arithmetic-Only
+                            Inference, CVPR'2018</a></td>
+                            <td><a
+                            href="https://forms.gle/XvMFgowG9qy19sMK9">[Submit
+                            your review here.]</a></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>2/3</td>
+                            <td>Kernel Computation
+                                <a
+                                href="https://drive.google.com/file/d/1LAIQp4IkbROJqADosYk4X20MAMs3nlox/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/cyYAsOfxJpQ">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>2/8</td>
+                            <td>Dataflow
+                                <a
+                                href="https://drive.google.com/file/d/1LrPp5AV6q4HEHwaE6NdwyRfGIwkvDlNG/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/L7xMbei3ceE">recording</a>
+                            <td><a
+                            href="https://arxiv.org/pdf/1410.0759.pdf">cuDNN,
+                            arXiv'2014</a></td>
+                            <td><a
+                            href="https://forms.gle/nJ7yZub81jswVFAD8">[Submit
+                            your review here.]</a></td>
+                            <td><a href="https://drive.google.com/file/d/18TYiHUpqB7dT5MLPa89BlGNbJhst7acr/view?usp=sharing">Lab 2 (due 2/19)</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>2/10</td>
+                            <td>Accelerator
+                                <a
+                                href="https://drive.google.com/file/d/1MZ0wyZBBAtTDrVa8JUiHOkS-9LesCLgq/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/luHSZwq1Gdc">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>2/15</td>
+                            <td>Presidents' Day. No class!
+                            <td><a
+                            href="https://arxiv.org/ftp/arxiv/papers/1704/1704.04760.pdf">TPU,
+                            ISCA'2017</a></td>
+                            <td><a
+                            href="https://forms.gle/A8f5tsXTpRgFYsg58">[Submit
+                            your review here.]</a></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>2/17</td>
+                            <td>Guest Lecture: The current state of Neural
+                            Network Quantization, Amir Gholami, UC Berkeley
+                                <a
+                                href="https://drive.google.com/file/d/1PMyw7q9e0G3AK3nahsRN5qt2-oOIMk_n/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/t6aqZAWf2rM">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>2/22</td>
+                            <td>Chipyard/FireSim Overview and Setup, Abraham Gonzalez, UC Berkeley
+                                <a
+                                href="https://drive.google.com/file/d/1ECcglZS5OvAKU6sjkANCeJxncUPbBFX_/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/SORMb05ZUXc">recording</a>
+                            </td>
+                            <td>
+                            <a
+                            href="https://sagark.org/assets/pubs/firesim-isca2018.pdf">FireSim,
+                            ISCA'2018</a></td>
+                            <td><a
+                            href="https://forms.gle/PPkwKy3nqgwXLLsm6">[Submit
+                            your review here.]</a></td>
+
+                            <td><a href="https://drive.google.com/file/d/1kk5tuIPHhIU6qyExn491VzW3Fbsmx8rT/view?usp=sharing">Lab 3 (due 3/5)</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>2/24</td>
+                            <td>Guest Lecture: Systolic Array and Tensorization:
+                            Key Components of A Deep-Learning Accelerator, Ron Diamant & Randy Huang, AWS
+                                <a
+                                href="https://drive.google.com/file/d/1QWYCj-x1Y3wl3iQjBj5uLxIx1qE9RHGh/view?usp=sharing">slides</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>3/1</td>
+                            <td>Mapping
+                                <a
+                                href="https://drive.google.com/file/d/1R_A4MprF62FFsLETprVBX-Y4vp9EYBdI/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/EwdAoVIgy3o">recording</a>
+                            </td>
+                            <td>
+                            <a
+                            href="https://people.eecs.berkeley.edu/~krste/papers/phipac_ics97.pdf">PHiPAC'ICS1997</a></td>
+                            <td>Optional reading. No review required.</td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>3/3</td>
+                            <td>Data Orchestration
+                                <a
+                                href="https://drive.google.com/file/d/1S9IQz8j_VBD0tVwD4JJ4CZNwYwgzIfmn/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/yRnNt8qjYKg">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>3/8</td>
+                            <td>Sparsity
+                                <a
+                                href="https://drive.google.com/file/d/1TdSrL2EgeMd0PGmHx6txNUAFSGlW_WAf/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/GWRG_Pbjc-U">recording</a>
+                            </td>
+                            <td>
+                            <a
+                            href="https://research.nvidia.com/sites/default/files/publications/ISCA_2017_SCNN.pdf">SCNN'ISCA2017</a></td>
+                            <td><a
+                            href="https://forms.gle/PkNozSMAV72wZwz8A">[Submit
+                            your review here.]</a></td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>3/10</td>
+                            <td>Co-Design
+                                <a
+                                href="https://drive.google.com/file/d/1UGWqjUs-V0lfAjFRglh1Cj9rPYxnH0dN/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/FUsnvyDH-Vo">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>3/15</td>
+                            <td>Guest Lecture: Configurable Cloud-Scale
+                            Real-Time Deep Learning, Bita Rouhani, Microsoft 
+                                <a
+                                href="https://drive.google.com/file/d/1Bd68aIX9BQ9lbYO0zkYO1ugwV_GW2ZCZ/view?usp=sharing">slides</a>
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>3/17</td>
+                            <td>Other Operators & Near-Data
+                                <a
+                                href="https://drive.google.com/file/d/1VG9hgrVj0tjWHCu6fLyQrtthWm_1te1l/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/drzqHtJKmbI">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>3/22</td>
+                            <td>Spring break!
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>3/24</td>
+                            <td>Spring break!
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>3/29</td>
+                            <td>Guest Lecture: Accelerating Software 2.0, Yaqi
+                            Zhang, SambaNova
+                                <a
+                                href="https://drive.google.com/file/d/1XA_rhq3T2uCiljds_mrE-yxfWetb271h/view?usp=sharing">slides</a>
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>3/31</td>
+                            <td>Training
+                                <a
+                                href="https://drive.google.com/file/d/1W_JRsQQd8nptQrO0TFOMhvS6C7zMawlj/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/DlKIVAEqHjo">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">11</th>
+                            <td>4/5</td>
+                            <td>Accelerator-Level Parallelism
+                                <a
+                                href="https://drive.google.com/file/d/1Cakx8lxLQDx1JjluNwdduROsqAQG8l_E/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/PhFnoS-Dnr8">recording</a>
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>4/7</td>
+                            <td>Guest Lecture: Science to Fuel Neural Nets and
+                            TPU Design, Cliff Young, Google
+                                <a
+                                href="https://youtu.be/KQ2Eg-7-0Xg">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>4/12</td>
+                            <td>Guest Lecture: The Future of ML is Tiny and
+                            Bright, Vijay Janapa Reddi, Harvard University
+                                <a
+                                href="https://drive.google.com/file/d/1-fMWMQw1rCnko7w_kUix5AL-oMRK0iFS/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/chiz2lEdc2I">recording</a>
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>4/14</td>
+                            <td>Advanced Technology
+                                <a
+                                href="https://drive.google.com/file/d/104IUE_BMZubzkt0hzKaZUQSHS1tleYOl/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/d8IVXYQgUKY">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">12</th>
+                            <td>4/19</td>
+                            <td>Guest Lecture: Problems facing analog and
+                            in-memory computing, Brian Zimmer, NVIDIA
+                                <a
+                                href="https://youtu.be/oWLezjrqQWo">recording</a>
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>4/21</td>
+                            <td>End-to-end Deployment
+                                <a
+                                href="https://drive.google.com/file/d/12877ALAqdm8zovNTHwmYCqCssuunAdB9/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/w5xKixKtXj8">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">13</th>
+                            <td>4/26</td>
+                            <td>Conclusion
+                                <a
+                                href="https://drive.google.com/file/d/13oypSgfuF24pWyBOn-emBrwLvkH2cpUK/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/-py43nolnEs">recording</a>
+                            </td>
+                            <td>No reading this week.
+                            <td>
+                            </td>
+
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>4/28</td>
+                            <td>Open office hour (no lecture).
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='resources'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Resources</div>
+            </div>
+
+            <div class="col-md-3">
+            <div class="subsection_header">Textbooks/Courses</div>
+            <ul>
+            <li><a
+            href="https://www.deeplearningbook.org/">
+            Deep Learning Book,
+            </a>
+              Ian Goodfellow, Yoshua Bengio, Aaron Courville
+            </li>
+            <li><a
+            href="https://www.coursera.org/learn/machine-learning">
+            Machine Learning,
+            </a>
+              Andrew Ng, Coursera
+            </li>
+            <li><a
+            href="https://www.cs.toronto.edu/~hinton/coursera_lectures.html">
+            Neural Networks for Machine Learning,
+            </a>
+              Geoffrey Hinton, Coursera
+            </li>
+            </ul>
+            </div>
+
+            <div class="col-md-3">
+            <div class="subsection_header">Hardware</div>
+            <ul>
+            <li><a
+            href="https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-nano/">
+            Jetson Nano</a></li>
+            <li><a
+            href="https://coral.ai/products/dev-board/">
+            Coral Edge TPU</a></li>
+            <li><a
+            href="https://www.xilinx.com/support/university/boards-portfolio/xup-boards/XUPPYNQ.html">
+            Xilinx PYNQ-Z1</a></li>
+            <li><a
+            href="https://github.com/ucb-bar/chipyard">
+            Chipyard</a></li>
+            <li><a
+            href="https://github.com/ucb-bar/gemmini">
+            Gemmini</a></li>
+            </ul>
+            </div>
+
+            <div class="col-md-3">
+            <div class="subsection_header">Tutorials</div>
+            <ul>
+            <li><a
+            href="https://pytorch.org/tutorials/">
+            Tutorial on HW for DNNs</a></li>
+            <li><a
+            href="https://pytorch.org/tutorials/">
+            PyTorch Tutorial</a></li>
+            <li><a
+            href="http://deeplearning.net/tutorial/">
+            Deep Learning Tutorials</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='honor_code'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Honor Code</div>
+            </div>
+
+            <div class="col-md-12">
+                <ul>
+                    <li>If you turn in someone else’s work as if it were your own, you are guilty of academic misconduct. This
+                        includes problem sets, answers on exams, lab exercise checks, project design, and any required
+                        course turn-in material.</li>
+                    <li>Also, if you knowingly aid in academic misconduct, you are guilty.</li>
+                    <li>We have software that compares your submitted work to others.</li>
+                    <li>However, it is okay to discuss with others lab exercises and the project (obviously, okay to
+                        work with project partner). Okay to discuss homework with others. But everyone must turn in
+                        their own work.</li>
+                    <li>Do not post your work on public repositories like github (private o.k.)</li>
+                    <li>If we catch your academic misconduct, you will get negative points on the assignment: It is better to not do
+                        the work than to cheat! If it is a midterm exam, final exam, or final project, you get an F in
+                        the class. All cases of academic misconducts reported to the office of student conduct. </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-12">
+                <div class="section_header"><a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc4NYHdUJ8IzYA1SoiTinWBybGWkj0mfmdnHAeygAxkZajelQ/viewform">EECS
+                Student Incident Reporting Form</a></div>
+            </div>
+            <div class="col-md-12">
+            It is very important to the EECS Department that every student in
+            the EECS community feels safe, respected and welcome.  We recognize
+            though that incidents happen, sometimes unintentionally, that run
+            counter to that goal. There are many things we can do to try to
+            improve department climate, but we need to understand where the
+            challenges lie. If you experience a remark, or disrespectful
+            treatment, or if you feel you are being ignored, excluded or
+            marginalized in a course or department-related activity, please
+            speak up.  If you witness such treatment toward someone else, please
+            also say something. If you notice course content (such as lectures,
+            discussions, assignments, exams) that marginalize or alienate you,
+            please point them out. This is particularly important if the
+            offending actions/content are based on gender, race, age,
+            disability, or other protected category but it’s not always possible
+            to tell and so we encourage you to share with us in any case. The
+            more we hear, the more we can do to improve the climate in our
+            courses and department-supported activities. We also welcome
+            suggestions on things we could do to improve department climate. 
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/style.js"></script>
+</body>
+
+</html>
