@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- page css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+
+    <title>Deep Neural Networks UT-Fall 2022
+    </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Deep Learning</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#course_info">Overview</a>
+                    </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#grading">Grading</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#course_outline">Outline</a>
+                    </li>
+                    
+                   
+                    
+                    
+<!--                     <li class="nav-item active">
+                        <a class="nav-link" href="https://piazza.com/berkeley/spring2021/ee2902">Piazza</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://www.gradescope.com/courses/221753">Gradescope</a> -->
+                    </li>
+                    <!--<li class="nav-item active">-->
+                    <!--<a class="nav-link" href="#">Archives</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" id='title'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h1>Deep Neural Networks UT, Fall 2022
+            </div>
+            <div class="col-md-12">
+                <img src="assets/image/ut_header.jpg" class="img-fluid" alt="AI">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='about'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Course Overview</div>
+            </div>
+            <div class="col-md-12">
+                <p>
+                Deep Learning is a subset of Machine Learning and this field has some amazing 
+                    real-world applications such as Apple’s Siri to Google’s Self Driving Car.
+                    Deep learning allows machines to solve relatively complex problems even when using
+                    data that is diverse, less structured or interdependent. Deep learning is a form of machine
+                    learning that is inspired and modeled on how the human brain works.</p>
+                <p>
+                    In this course students are introduced to the architecture of deep neural networks, 
+                    algorithms that are developed to extract high-level feature representations of data.
+                    In addition to theoretical foundations of neural networks, including backpropagation and stochastic
+                    gradient descent, students get hands-on experience building deep neural network models with Python 
+                    and learn how to use application program interfaces (APIs),
+                    such as TensorFlow and Keras, for building a variety of deep neural networks:
+                    convolutional neural network (CNN), recurrent neural network (RNN), self-organizing maps (SOM), 
+                    generative adversarial network (GANs), and long short-term memory (LSTM).
+                    
+                </p>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="container sec">
+        <!-- Staff Info -->
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Instructor</h3>
+                <div class="instructor">
+                    <a href="https://ece.ut.ac.ir/en/~akalhor">
+                        <div class="instructorphoto"><img src="assets/image/Ahmad_Kalhor.jpg"></div>
+                        <div>Ahmad Kalhor</div>
+                    </a>
+                </div>
+            </div>
+          
+            <div class="col-md-9">
+                <h3>Course Assistants</h3>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/reza-dehghani-572b3b154/">
+                        <div class="instructorphoto"><img src="assets/image/Reza_Dehghani.jpg"></div>
+                        <div>Reza Dehghani</a><br>Head CA</div>
+                </div>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/kimia-alavi-98a2a8249/">
+                        <div class="instructorphoto"><img src="assets/image/alavi3.JPG"></div>
+                        <div>Kimia Alavi</a><br>Head CA</div>
+                    </a>
+                </div>
+                <br>
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/maedeh-h-toosi-038951a7/">
+                        <div class="instructorphoto"><img src="assets/image/Maedeh_Toosi.jpg"></div>
+                        <div>Maedeh H.Toosi</div>
+                    </a>
+                </div>
+            
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/mohammad-nili/">
+                        <div class="instructorphoto"><img src="assets/image/MohammadـNili.jpg"></div>
+                        <div>Mohammad Nili</div>
+                    </a>
+                </div>
+            
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/mhbadiei/">
+                        <div class="instructorphoto"><img src="assets/image/mh_badiei.jpg"></div>
+                        <div>Mohammad Hossein Badiei</div>
+                    </a>
+                </div>
+                
+                 <div class="instructor">
+                    <a href="https://www.linkedin.com/in/saeed-mohammadi-017598250?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5jxlQvKESPaCjBiKPFg5uw%3D%3D/">
+                        <div class="instructorphoto"><img src="assets/image/Saeed_mohammadi.jpg"></div>
+                        <div>Saeed Mohammadi</div>
+                    </a>
+                </div>
+                
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/mostafa-hajighasemlou-7116b7250">
+                        <div class="instructorphoto"><img src="assets/image/mostafa_haji.jpg"></div>
+                        <div>Mostafa Hajighasemlou</div>
+                    </a>
+                </div>
+                
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/amin-mohamadi-aa14491b6/">
+                        <div class="instructorphoto"><img src="assets/image/amin_mo.jpg"></div>
+                        <div>Amin Mohammadi</div>
+                    </a>
+                </div>
+            
+                <div class="instructor">
+                    <a href="https://www.linkedin.com/in/amin-sheykhzade-1324b11b7/">
+                        <div class="instructorphoto"><img src="assets/image/sheykh.jpeg"></div>
+                        <div>Amin Sheykhzadeh</div>
+                    </a>
+                </div>
+            
+                <div class="instructor">
+                         <a href="https://www.linkedin.com/in/amir-davanloo-2416561b0/">
+                        <div class="instructorphoto"><img src="assets/image/davanloo.jpg"></div>
+                        <div>Amir Davanloo</div>
+                    </a>
+                </div>
+                    
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/milad-reisi-482015108/">
+                      <div class="instructorphoto"><img src="assets/image/milad.jpg"></div>
+                      <div>Milad Raeisi</div>
+                    </a>
+                </div>
+        
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/mohammad-sepehri-7771b5202/">
+                      <div class="instructorphoto"><img src="assets/image/Mohammad_Sepehri.jpg"></div>
+                      <div>Mohammad Sepehri</div>
+                     </a>
+                </div>
+                    
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/mojtaba-amiri-0986a01ba/">
+                      <div class="instructorphoto"><img src="assets/image/amiri.jpg"></div>
+                      <div>Mojtaba Amiri</div>
+                      </a>
+                </div>
+                    
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/shahla-daneshi-474052141/">
+                      <div class="instructorphoto"><img src="assets/image/daneshi.jpg"></div>
+                      <div>Shahla Daneshi</div>
+                     </a>
+                </div>
+                    
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/siavash-razmi/">
+                      <div class="instructorphoto"><img src="assets/image/s_razmi.jpg"></div>
+                      <div>Siavash Razmi</div>
+                     </a>
+                </div>
+            
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/siavash-shams-90a735176/">
+                      <div class="instructorphoto"><img src="assets/image/si_shams.jpg"></div>
+                      <div>Siavash Shams</div>
+                     </a>
+                </div>
+         
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/daniel-saeedi/">
+                      <div class="instructorphoto"><img src="assets/image/danial_saeidi.jpg"></div>
+                      <div>Danyal saedi</div>
+                     </a>
+                </div>
+                <div class="instructor">
+                     <a href="https://www.linkedin.com/in/sadjadalikhani/">
+                      <div class="instructorphoto"><img src="assets/image/alikhani.jpg"></div>
+                      <div>Sajjad Alikhani</div>
+                     </a>
+                </div>
+                    
+            </div>
+        </div>
+      </div>   
+
+
+
+    <div class="container" id='course_info'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Class Time and Location</div>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Time</td>
+                            <td>Sunday, Tuesday</td>
+                            <td>9:00am -10:30 am</td>
+<!--                             <td><a href="https://berkeley.zoom.us/j/93107273919">Zoom</a></td>
+                            <td>Prof. Sophia Shao</td> -->
+                        </tr>
+                        
+                            <tr>
+                            <td>Location</td>
+                            <td>Class 206, Faculty of Mechanics</td>
+                            
+<!--                             <td><a href="https://berkeley.zoom.us/j/93107273919">Zoom</a></td>
+                            <td>Prof. Sophia Shao</td> -->
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='grading'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Grading</div>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td align="center">Midterm</td>
+                            <td>20 %</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Final</td>
+                            <td>20 %</td>
+                        </tr>
+                        <tr>
+                            <td align="center">Homeworks&Project</td>
+                            <td>60 %</td>
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="container" id='lab'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Course Channel</div>
+            </div>
+
+            <div class="col-md-12">
+                <ul>
+                    <li>You can access the course resources and the latest news through <a href="https://t.me/DeepLearning_Kalhor">telegram channel.</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id='course_outline'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Course Outline</div>
+            </div>
+            <div class="col-md-12">
+                <ul>
+<!--                     <li><a
+                    href="https://www.youtube.com/playlist?list=PLkFD6_40KJIxFWtQg20byt9umBlk6X7By">Lecture
+                    playlist</a></li> -->
+                </ul>
+            </div>
+
+            <div class="col-md-12">
+                <table class="table table-striped" id="course_outline_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Week</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Lecture Topic</th>
+                            <th scope="col">Slides</th>
+                            <th scope="col">Homework/Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>9/18</td>
+                            <td>
+                                Introduction
+                            </td>
+                            
+                            <td>
+                                  <a
+                                 href="https://docs.google.com/presentation/d/1ADhGvwFeGe-LrupON0ajniE4WT2FEeVu/edit?usp=sharing&ouid=117495827223630508411&rtpof=true&sd=true">Session_1</a>
+                                
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            
+                            <th scope="row">2</th>
+                            <td>9/25</td>
+                            <td>
+                               
+
+                            </td>
+                            
+                            <td>
+                                  
+                            </td>
+                            <td>
+                                <a
+                                 href="https://docs.google.com/document/d/1dBny-VKfB4BAio53vsP9n0DANCuAvvpdxPj1-HehgVg/edit?usp=sharing">HW_0</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        
+                           
+                        
+                         <tr>
+                            <th scope="row">4</th>
+                            <td>10/9</td>
+                            <td>
+                                 Fully Connected Neural Networks
+                            </td>
+                            
+                            <td>
+                                  <a
+                                 href="https://docs.google.com/presentation/d/1YpIPlyzxjjC1EbLmUUctE4T91xhQmfLR/edit?usp=sharing&ouid=117495827223630508411&rtpof=true&sd=true">Session_2</a>
+                                
+                            </td>
+                            <td>
+                              <a
+                                 href="https://drive.google.com/file/d/1hQqFJn9DrNQV6b0pitG0-Z6bQ7TsP-55/view?usp=sharing">HW_1</a>
+                             </td>
+                            <td></td>
+                        </tr>
+                        
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>11/7</td>
+                            <td>
+                                Convolutional Neural Networks
+                            </td>
+                            
+                            <td>
+                                  <a
+                                 href="https://drive.google.com/file/d/1IUQBc-eM4hjtvUftWWH7DQps3PrDfO2C/view?usp=share_link">Session_3</a>
+                                
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                         <tr>
+                            
+                            <th scope="row">8</th>
+                            <td>11/12</td>
+                            <td>
+                               
+
+                            </td>
+                            
+                            <td>
+                                  
+                            </td>
+                            <td>
+                                <a
+                                 href="https://drive.google.com/file/d/1l230KNeJEKnZ8_2eDRvkQdHPo8qY5r6T/view?usp=share_link">HW_Extra</a>
+                            </td>
+                            <td></td>
+                             
+                                                     
+                         <tr>
+                            
+                            <th scope="row">9</th>
+                            <td>11/14</td>
+                            <td>
+                               
+
+                            </td>
+                            
+                            <td>
+                                  
+                            </td>
+                            <td>
+                                <a
+                                 href="https://drive.google.com/file/d/16wXAILzcdsozKTZEFodBQOrN2j5F4nCV/view?usp=share_link">HW_2</a>
+                            </td>
+                            <td></td>
+                             
+                        </tr>
+                        
+                        
+                                                
+                         <tr>
+                            <th scope="row">10</th>
+                            <td>11/22</td>
+                            <td>
+                                 Region based CNNs
+                            </td>
+                            
+                            <td>
+                                  <a
+                                 href="https://drive.google.com/file/d/1rtL8uabwNmdE1JXRoXsUeGsKbHmXYFyA/view?usp=sharing">Session_4</a>
+                                
+                            </td>
+                            <td>
+                              
+                             </td>
+                            <td></td>
+                        </tr>
+                        
+                           <tr>
+                            
+                            <th scope="row">11</th>
+                            <td>11/27</td>
+                            <td>
+                               
+
+                            </td>
+                            
+                            <td>
+                                  
+                            </td>
+                            <td>
+                                <a
+                                 href="https://drive.google.com/file/d/1L0_7BccIRD6Hufilk2AAfALrBrsFYh2C/view?usp=sharing">HW_3</a>
+                            </td>
+                            <td></td>
+                             
+                        </tr>
+                        
+                        
+                                   <tr>
+                            <th scope="row">12</th>
+                            <td>12/1</td>
+                            <td>
+                                 Recurrent Neural Networks
+
+                            </td>
+                            
+                            <td>
+                                  <a
+                                 href="https://docs.google.com/presentation/d/1uaOXzWtWJQlPkRc7Ud9a_1htmRH9OpPm/edit?usp=sharing&ouid=117495827223630508411&rtpof=true&sd=true">Session_5</a>
+                                
+                            </td>
+                            <td>
+                              
+                             </td>
+                            <td></td>
+                        </tr>
+                        
+                           <tr>
+                            
+                            <th scope="row">13</th>
+                            <td>12/9</td>
+                            <td>
+                               
+
+                            </td>
+                            
+                            <td>
+                                  
+                            </td>
+                            <td>
+                                <a
+                                 href="https://drive.google.com/file/d/1lcTTg3xFp6gZkRekpYMMo-PqP2HPpI9v/view?usp=sharing">HW_4</a>
+                            </td>
+                            <td></td>
+                             
+                        </tr>
+                        
+                                  <tr>
+                            <th scope="row">14</th>
+                            <td>12/21</td>
+                            <td>
+                                 Transformers
+
+                            </td>
+                            
+                            <td>
+                                  <a
+                                 href="https://docs.google.com/presentation/d/1h66jYlwuRbVEh8RU1u9nID-3X3M255YY/edit?usp=sharing&ouid=117495827223630508411&rtpof=true&sd=true">Session_6</a>
+                                
+                            </td>
+                            <td>
+                              <a
+                                 href="https://drive.google.com/file/d/1vILJDRR1jc3RLHmv0-M3euLrhy8YfEDv/view?usp=sharing">HW_5</a>
+                             </td>
+                            <td></td>
+                        </tr>
+                        
+                         <tr>
+                            
+                            <th scope="row">15</th>
+                            <td>1/4</td>
+                            <td>
+                               Variational Auto encoders and Generative Adversarial Networks
+
+
+                            </td>
+                            
+                            <td>
+                                 <a
+                                 href="https://docs.google.com/presentation/d/11tHDkE1DYvMsYVMFqaA6Ng7UqhwLd__x/edit?usp=sharing&ouid=117495827223630508411&rtpof=true&sd=true">Session_7</a>
+                                
+                            </td>
+                            <td>
+                               <a
+                                 href="https://drive.google.com/file/d/1JeUZQFWZDfh91uF6E1Sa5rNe1VglfkpU/view?usp=sharing">HW_6</a>
+                            </td>
+                            <td></td>
+                             
+                        </tr>
+                        
+                        
+                        
+                        <tr>
+                            
+                   
+<!--                             <th scope="row">2</th>
+                            <td>1/25</td>
+                            <td>Introduction to DNNs
+                                <a
+                                href="https://drive.google.com/file/d/1JI4ivKVCugNM0dNEA-6tUnq4PhLNaKzn/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/sCS0wAhsKmw">recording</a>
+                            </td>
+                            <td><a
+                            href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet,
+                            NeurIPS'2012</a></td>
+                            <td><a
+                            href="https://forms.gle/tevAvmGdJ9q7Sx5q6">[Submit
+                            your review here.]</a></td>
+                            <td><a href="https://drive.google.com/file/d/1LBtLjz2pdo6uj-E0aR69-ZGjmR9RBSDU/view?usp=sharing">Lab 1 (due 2/5)</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>1/27</td>
+                            <td>Introduction to DNNs 2
+                                <a
+                                href="https://drive.google.com/file/d/1Kp1AUCx4q9Dk_6X_aGh43cPb66uffbpY/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/X7si5x_dt_4">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr> -->
+<!--                             <th scope="row">3</th>
+                            <td>2/1</td>
+                            <td>Quantization
+                                <a
+                                href="https://drive.google.com/file/d/1Kxb5NwNRdgm6fNYkPPLBB3JqlDyMlR8o/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/fDRWng4F0jY">recording</a>
+                            </td>
+                            <td><a
+                            href="https://arxiv.org/pdf/1712.05877.pdf">Integer-Arithmetic-Only
+                            Inference, CVPR'2018</a></td>
+                            <td><a
+                            href="https://forms.gle/XvMFgowG9qy19sMK9">[Submit
+                            your review here.]</a></td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>2/3</td>
+                            <td>Kernel Computation
+                                <a
+                                href="https://drive.google.com/file/d/1LAIQp4IkbROJqADosYk4X20MAMs3nlox/view?usp=sharing">slides</a>
+                                <a
+                                href="https://youtu.be/cyYAsOfxJpQ">recording</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr> -->
+                       
+
+
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+<!--     <div class="container" id='honor_code'>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="section_header">Honor Code</div>
+            </div> -->
+
+<!--             <div class="col-md-12">
+                <ul>
+                    <li>If you turn in someone else’s work as if it were your own, you are guilty of academic misconduct. This
+                        includes problem sets, answers on exams, lab exercise checks, project design, and any required
+                        course turn-in material.</li>
+                    <li>Also, if you knowingly aid in academic misconduct, you are guilty.</li>
+                    <li>We have software that compares your submitted work to others.</li>
+                    <li>However, it is okay to discuss with others lab exercises and the project (obviously, okay to
+                        work with project partner). Okay to discuss homework with others. But everyone must turn in
+                        their own work.</li>
+                    <li>Do not post your work on public repositories like github (private o.k.)</li>
+                    <li>If we catch your academic misconduct, you will get negative points on the assignment: It is better to not do
+                        the work than to cheat! </li>
+                </ul>
+            </div> -->
+            
+           
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/style.js"></script>
+</body>
+
+</html>
